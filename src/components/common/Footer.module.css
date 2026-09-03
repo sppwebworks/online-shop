@@ -1,0 +1,139 @@
+.footer {
+  border-top: 1px solid var(--border-color);
+  background: var(--bg-secondary);
+  margin-top: 4rem;
+}
+
+.container {
+  width: 100%;
+  padding: 3rem 2rem 1.5rem;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: 1.6fr repeat(4, 1fr);
+  gap: 2rem;
+  margin-bottom: 2.5rem;
+}
+
+@media (max-width: 900px) {
+  .grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .brandColumn {
+    grid-column: 1 / -1;
+  }
+}
+
+@media (max-width: 520px) {
+  .grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+.brandColumn {
+  display: flex;
+  flex-direction: column;
+  gap: 0.9rem;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: var(--text-primary);
+  text-decoration: none;
+  letter-spacing: -0.01em;
+}
+
+.logoMark {
+  width: 10px;
+  height: 10px;
+  border-radius: 3px;
+  background: var(--accent);
+}
+
+.logoAccent {
+  color: var(--accent);
+}
+
+.tagline {
+  color: var(--text-muted);
+  font-size: 0.85rem;
+  line-height: 1.6;
+  max-width: 300px;
+}
+
+.paymentRow {
+  display: flex;
+  gap: 0.5rem;
+}
+
+.paymentBadge {
+  width: 32px;
+  height: 32px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--card-bg);
+  border: 1px solid var(--border-color);
+  border-radius: var(--radius-sm);
+  font-size: 0.95rem;
+}
+
+.column {
+  display: flex;
+  flex-direction: column;
+  gap: 0.6rem;
+}
+
+.columnTitle {
+  font-size: 0.78rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: var(--text-primary);
+  margin-bottom: 0.3rem;
+}
+
+.link {
+  color: var(--text-muted);
+  text-decoration: none;
+  font-size: 0.87rem;
+  transition: color 0.15s;
+  width: fit-content;
+}
+
+.link:hover {
+  color: var(--accent);
+}
+
+.linkCapitalize {
+  text-transform: capitalize;
+}
+
+.infoLine {
+  color: var(--text-muted);
+  font-size: 0.87rem;
+  line-height: 1.5;
+}
+
+.bottomBar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  padding-top: 1.5rem;
+  border-top: 1px solid var(--border-color);
+  color: var(--text-muted);
+  font-size: 0.8rem;
+}
+
+.demoNote {
+  color: var(--text-muted);
+  opacity: 0.8;
+}

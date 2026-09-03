@@ -1,0 +1,325 @@
+.banner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: linear-gradient(135deg, var(--admin-accent) 0%, #4338ca 100%);
+  border-radius: var(--admin-radius);
+  padding: 1.5rem 1.75rem;
+  margin-bottom: 1.5rem;
+}
+
+.title {
+  font-size: 1.4rem;
+  font-weight: 700;
+  color: #ffffff;
+  letter-spacing: -0.01em;
+}
+
+.subtitle {
+  font-size: 0.85rem;
+  color: rgba(255, 255, 255, 0.8);
+  margin-top: 0.25rem;
+}
+
+.quickActions {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+  gap: 1rem;
+  margin-bottom: 2rem;
+}
+
+.quickAction {
+  display: flex;
+  align-items: center;
+  gap: 0.7rem;
+  padding: 0.9rem 1.1rem;
+  background: var(--admin-card-bg);
+  border: 1px solid var(--admin-border);
+  border-radius: var(--admin-radius);
+  text-decoration: none;
+  color: var(--admin-text);
+  font-weight: 600;
+  font-size: 0.87rem;
+  transition: box-shadow 0.2s, transform 0.2s, border-color 0.2s;
+}
+
+.quickAction:hover {
+  border-color: var(--admin-accent);
+  box-shadow: var(--admin-shadow-md);
+  transform: translateY(-1px);
+}
+
+.quickActionIcon {
+  font-size: 1.15rem;
+}
+
+.sectionLabel {
+  font-size: 0.75rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: var(--admin-text-muted);
+  margin-bottom: 0.75rem;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 1rem;
+  margin-bottom: 2rem;
+}
+
+.splitRow {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1.25rem;
+  margin-bottom: 2rem;
+}
+
+@media (max-width: 900px) {
+  .splitRow {
+    grid-template-columns: 1fr;
+  }
+}
+
+.panel {
+  background: var(--admin-card-bg);
+  border: 1px solid var(--admin-border);
+  border-radius: var(--admin-radius);
+  padding: 1.25rem;
+}
+
+.statusBreakdown {
+  display: flex;
+  flex-direction: column;
+  gap: 0.7rem;
+}
+
+.breakdownRow {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.breakdownLabel {
+  width: 80px;
+  flex-shrink: 0;
+  font-size: 0.8rem;
+  color: var(--admin-text-muted);
+  text-transform: capitalize;
+}
+
+.breakdownTrack {
+  flex: 1;
+  height: 8px;
+  border-radius: 999px;
+  background: var(--admin-bg);
+  overflow: hidden;
+}
+
+.breakdownFill {
+  height: 100%;
+  border-radius: 999px;
+  transition: width 0.3s;
+}
+
+.breakdownCount {
+  width: 24px;
+  flex-shrink: 0;
+  text-align: right;
+  font-size: 0.82rem;
+  font-weight: 600;
+  color: var(--admin-text);
+}
+
+.alertsList {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.alertRow {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.75rem;
+  padding: 0.6rem 0.7rem;
+  border-radius: var(--admin-radius-sm);
+  text-decoration: none;
+  transition: background 0.15s;
+}
+
+.alertRow:hover {
+  background: var(--admin-bg);
+}
+
+.alertTitle {
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: var(--admin-text);
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  max-width: 220px;
+}
+
+.alertVariant {
+  font-size: 0.75rem;
+  color: var(--admin-text-muted);
+  text-transform: capitalize;
+  margin-top: 0.1rem;
+}
+
+.alertBadge {
+  flex-shrink: 0;
+  padding: 0.2rem 0.6rem;
+  border-radius: 999px;
+  font-size: 0.72rem;
+  font-weight: 700;
+  white-space: nowrap;
+}
+
+.alertBadgeOut {
+  background: var(--admin-danger-soft);
+  color: var(--admin-danger);
+}
+
+.alertBadgeLow {
+  background: var(--admin-warning-soft);
+  color: #92400e;
+}
+
+.sectionHeader {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 0.75rem;
+}
+
+.sectionHeader .sectionLabel {
+  margin-bottom: 0;
+}
+
+.viewAllLink {
+  font-size: 0.8rem;
+  font-weight: 600;
+  color: var(--admin-accent);
+  text-decoration: none;
+}
+
+.viewAllLink:hover {
+  text-decoration: underline;
+}
+
+.recentWrapper {
+  background: var(--admin-card-bg);
+  border: 1px solid var(--admin-border);
+  border-radius: var(--admin-radius);
+  overflow-x: auto;
+}
+
+.recentTable {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.recentTable th {
+  text-align: left;
+  font-size: 0.72rem;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  color: var(--admin-text-muted);
+  padding: 0.8rem 1.1rem;
+  border-bottom: 1px solid var(--admin-border);
+}
+
+.recentTable td {
+  padding: 0.7rem 1.1rem;
+  border-bottom: 1px solid var(--admin-border);
+  font-size: 0.85rem;
+  color: var(--admin-text);
+  white-space: nowrap;
+}
+
+.recentTable tr:last-child td {
+  border-bottom: none;
+}
+
+.recentTable tr:hover td {
+  background: var(--admin-bg);
+}
+
+.orderId {
+  font-weight: 600;
+}
+
+.orderTotal {
+  font-weight: 700;
+}
+
+.statusBadge {
+  display: inline-block;
+  padding: 0.25rem 0.65rem;
+  border-radius: 999px;
+  font-size: 0.72rem;
+  font-weight: 600;
+  text-transform: capitalize;
+}
+
+.statusPending {
+  background: var(--admin-warning-soft);
+  color: #92400e;
+}
+
+.statusProcessing {
+  background: var(--admin-accent-soft);
+  color: var(--admin-accent);
+}
+
+.statusShipped {
+  background: #e0e7ff;
+  color: #4338ca;
+}
+
+.statusDelivered {
+  background: var(--admin-success-soft);
+  color: #15803d;
+}
+
+.statusCancelled {
+  background: var(--admin-danger-soft);
+  color: var(--admin-danger);
+}
+
+.breakdownFill.statusPending {
+  background: #f59e0b;
+}
+
+.breakdownFill.statusProcessing {
+  background: var(--admin-accent);
+}
+
+.breakdownFill.statusShipped {
+  background: #4338ca;
+}
+
+.breakdownFill.statusDelivered {
+  background: var(--admin-success);
+}
+
+.breakdownFill.statusCancelled {
+  background: var(--admin-danger);
+}
+
+.noResults {
+  padding: 2rem;
+  text-align: center;
+  color: var(--admin-text-muted);
+  background: var(--admin-card-bg);
+  border: 1px solid var(--admin-border);
+  border-radius: var(--admin-radius);
+}
+
+.error {
+  color: var(--admin-danger);
+}

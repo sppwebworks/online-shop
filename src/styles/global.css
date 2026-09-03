@@ -1,0 +1,123 @@
+:root {
+  /* Storefront palette — warm cream, ink & tan (Shopio-style) */
+  --bg-primary: #ffffff;
+  --bg-secondary: #f7f2e8;
+  --text-primary: #221d17;
+  --text-secondary: #5c5347;
+  --text-muted: #9c9184;
+  --card-bg: #ffffff;
+  --border-color: #e8e0d0;
+  --input-bg: #ffffff;
+  --hover-bg: #f3ece0;
+  --active-bg: #f3e9db;
+  --header-bg: #ffffff;
+  --button-bg: #f3ece0;
+  --accent: #b8895a;
+  --accent-hover: #9c7248;
+  --accent-soft: #f3e9db;
+  --danger: #ef4444;
+  --danger-soft: #fef2f2;
+  --shadow-sm: 0 1px 2px rgba(15, 23, 42, 0.05);
+  --shadow-md: 0 8px 24px rgba(15, 23, 42, 0.08);
+  --radius-lg: 20px;
+  --radius-md: 14px;
+  --radius-sm: 10px;
+
+  /* Admin palette — separate namespace so the dashboard never inherits the
+     storefront's theme (including light/dark toggling). */
+  --admin-bg: #f6f7fb;
+  --admin-sidebar-bg: #12131a;
+  --admin-sidebar-text: #9599a8;
+  --admin-sidebar-text-active: #ffffff;
+  --admin-sidebar-hover: #1c1e28;
+  --admin-sidebar-border: #23242e;
+  --admin-card-bg: #ffffff;
+  --admin-border: #e8e9ee;
+  --admin-text: #14151a;
+  --admin-text-secondary: #6b6f80;
+  --admin-text-muted: #9497a6;
+  --admin-accent: #6366f1;
+  --admin-accent-hover: #4f46e5;
+  --admin-accent-soft: #eef0ff;
+  --admin-danger: #ef4444;
+  --admin-danger-soft: #fef2f2;
+  --admin-success: #10b981;
+  --admin-success-soft: #ecfdf5;
+  --admin-warning: #f59e0b;
+  --admin-warning-soft: #fffbeb;
+  --admin-radius: 12px;
+  --admin-radius-sm: 8px;
+  --admin-shadow: 0 1px 2px rgba(16, 24, 40, 0.04);
+  --admin-shadow-md: 0 4px 16px rgba(16, 24, 40, 0.08);
+}
+
+[data-theme="dark"] {
+  --bg-primary: #15120e;
+  --bg-secondary: #1c1811;
+  --text-primary: #f2ece0;
+  --text-secondary: #cbbfa9;
+  --text-muted: #8a7d6a;
+  --card-bg: #201b14;
+  --border-color: #332c20;
+  --input-bg: #241f17;
+  --hover-bg: #2a2318;
+  --active-bg: #33291a;
+  --header-bg: #15120e;
+  --button-bg: #2a2318;
+  --accent: #d6ac78;
+  --accent-hover: #c99a5f;
+  --accent-soft: #33291a;
+  --danger-soft: #2a1417;
+  --shadow-sm: 0 1px 2px rgba(0, 0, 0, 0.3);
+  --shadow-md: 0 8px 24px rgba(0, 0, 0, 0.45);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family:
+    "Inter",
+    -apple-system,
+    BlinkMacSystemFont,
+    "Segoe UI",
+    "Roboto",
+    "Helvetica Neue",
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background-color: var(--bg-primary);
+  color: var(--text-primary);
+  transition:
+    background-color 0.3s,
+    color 0.3s;
+}
+
+h1,
+h2,
+h3,
+h4 {
+  letter-spacing: -0.02em;
+}
+
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--text-muted);
+  border-radius: 4px;
+  opacity: 0.4;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--text-secondary);
+}

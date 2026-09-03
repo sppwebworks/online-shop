@@ -1,0 +1,78 @@
+.dropzone {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.6rem;
+  padding: 1.75rem 1.5rem;
+  border: 1.5px dashed var(--admin-border);
+  border-radius: var(--admin-radius);
+  background: var(--admin-bg);
+  cursor: pointer;
+  transition: border-color 0.15s, background 0.15s;
+}
+
+.dropzone:hover {
+  border-color: var(--admin-accent);
+}
+
+.dropzoneActive {
+  border-color: var(--admin-accent);
+  background: var(--admin-accent-soft);
+}
+
+.dropzoneIcon {
+  font-size: 1.5rem;
+}
+
+.dropzoneThumb {
+  width: 64px;
+  height: 64px;
+  object-fit: cover;
+  border-radius: 8px;
+  border: 1px solid var(--admin-border);
+}
+
+.uploadButton {
+  padding: 0.45rem 1.1rem;
+  border-radius: 999px;
+  border: none;
+  background: var(--admin-accent);
+  color: #ffffff;
+  font-size: 0.82rem;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.uploadButton:hover:not(:disabled) {
+  background: var(--admin-accent-hover);
+}
+
+.uploadButton:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+.dropzoneText {
+  font-size: 0.85rem;
+  color: var(--admin-text);
+  font-weight: 500;
+}
+
+.dropzoneHint {
+  font-size: 0.74rem;
+  color: var(--admin-text-muted);
+}
+
+.hiddenFileInput {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  opacity: 0;
+}
+
+.error {
+  margin-top: 0.5rem;
+  font-size: 0.78rem;
+  color: var(--admin-danger);
+}

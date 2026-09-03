@@ -1,0 +1,404 @@
+.container {
+  border-top: 1px solid var(--border-color);
+  padding-top: 3rem;
+  margin-top: 3rem;
+}
+
+.title {
+  font-size: 1.35rem;
+  font-weight: 700;
+  color: var(--text-primary);
+  letter-spacing: -0.01em;
+  margin-bottom: 1rem;
+}
+
+.summaryPanel {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2.5rem;
+  margin-bottom: 1.5rem;
+}
+
+.summaryLeft {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  flex-shrink: 0;
+}
+
+.summaryAvg {
+  font-size: 1.8rem;
+  font-weight: 800;
+  color: var(--text-primary);
+}
+
+.summaryStar {
+  color: #f59e0b;
+  font-size: 1.3rem;
+}
+
+.summaryCount {
+  color: var(--text-muted);
+  font-size: 0.85rem;
+  margin-left: 0.3rem;
+}
+
+.histogram {
+  display: flex;
+  flex-direction: column;
+  gap: 0.3rem;
+  flex: 1;
+  min-width: 200px;
+  max-width: 320px;
+}
+
+.histogramRow {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+}
+
+.histogramLabel {
+  width: 32px;
+  font-size: 0.76rem;
+  color: var(--text-muted);
+  flex-shrink: 0;
+}
+
+.histogramTrack {
+  flex: 1;
+  height: 6px;
+  border-radius: 999px;
+  background: var(--border-color);
+  overflow: hidden;
+}
+
+.histogramFill {
+  height: 100%;
+  background: #f59e0b;
+  border-radius: 999px;
+}
+
+.histogramCount {
+  width: 24px;
+  text-align: right;
+  font-size: 0.76rem;
+  color: var(--text-muted);
+  flex-shrink: 0;
+}
+
+.fitSummary {
+  margin-bottom: 1.5rem;
+}
+
+.fitSummaryLabel {
+  display: block;
+  font-size: 0.82rem;
+  font-weight: 600;
+  color: var(--text-secondary);
+  margin-bottom: 0.5rem;
+}
+
+.fitTags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+.fitTag {
+  padding: 0.35rem 0.75rem;
+  border-radius: 999px;
+  background: var(--bg-secondary);
+  border: 1px solid var(--border-color);
+  color: var(--text-secondary);
+  font-size: 0.78rem;
+  font-weight: 600;
+}
+
+.photoStrip {
+  margin-bottom: 1.75rem;
+}
+
+.photoStripLabel {
+  display: block;
+  font-size: 0.82rem;
+  font-weight: 600;
+  color: var(--text-secondary);
+  margin-bottom: 0.6rem;
+}
+
+.photoStripRow {
+  display: flex;
+  gap: 0.6rem;
+  overflow-x: auto;
+  padding-bottom: 0.3rem;
+}
+
+.photoStripImage {
+  width: 76px;
+  height: 76px;
+  object-fit: cover;
+  border-radius: var(--radius-sm);
+  flex-shrink: 0;
+  cursor: pointer;
+}
+
+.reviewFitTag {
+  display: inline-block;
+  padding: 0.15rem 0.55rem;
+  border-radius: 999px;
+  background: var(--bg-secondary);
+  border: 1px solid var(--border-color);
+  color: var(--text-secondary);
+  font-size: 0.7rem;
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+}
+
+.reviewImages {
+  display: flex;
+  gap: 0.5rem;
+  margin-top: 0.6rem;
+}
+
+.reviewImage {
+  width: 56px;
+  height: 56px;
+  object-fit: cover;
+  border-radius: var(--radius-sm);
+  border: 1px solid var(--border-color);
+}
+
+.fitPicker {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin-bottom: 0.85rem;
+}
+
+.fitOption {
+  padding: 0.4rem 0.8rem;
+  border-radius: 999px;
+  border: 1px solid var(--border-color);
+  background: var(--card-bg);
+  color: var(--text-secondary);
+  font-size: 0.78rem;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.fitOption:hover {
+  border-color: var(--accent);
+}
+
+.fitOptionActive {
+  border-color: var(--accent);
+  background: var(--accent-soft);
+  color: var(--accent-hover);
+}
+
+.empty {
+  color: var(--text-muted);
+  font-size: 0.9rem;
+  margin-bottom: 1.5rem;
+}
+
+.list {
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+  margin-bottom: 1.75rem;
+}
+
+.reviewCard,
+.myReviewCard {
+  padding-bottom: 1.25rem;
+  border-bottom: 1px solid var(--border-color);
+}
+
+.myReviewCard {
+  background: var(--bg-secondary);
+  border: 1px solid var(--border-color);
+  border-radius: var(--radius-md);
+  padding: 1.1rem;
+  margin-bottom: 1.5rem;
+}
+
+.reviewHeader {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  margin-bottom: 0.6rem;
+}
+
+.avatar {
+  width: 36px;
+  height: 36px;
+  flex-shrink: 0;
+  border-radius: 50%;
+  background: var(--accent-soft);
+  color: var(--accent-hover);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.78rem;
+  font-weight: 700;
+}
+
+.reviewerName {
+  font-size: 0.88rem;
+  font-weight: 600;
+  color: var(--text-primary);
+}
+
+.reviewDate {
+  font-size: 0.76rem;
+  color: var(--text-muted);
+}
+
+.reviewStars {
+  margin-left: auto;
+  color: #f59e0b;
+  font-size: 0.9rem;
+}
+
+.reviewComment {
+  color: var(--text-secondary);
+  font-size: 0.9rem;
+  line-height: 1.6;
+}
+
+.myReviewActions {
+  display: flex;
+  gap: 1rem;
+  margin-top: 0.75rem;
+}
+
+.editButton,
+.deleteButton {
+  background: none;
+  border: none;
+  padding: 0;
+  font-size: 0.82rem;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.editButton {
+  color: var(--accent);
+}
+
+.deleteButton {
+  color: var(--danger);
+}
+
+.form {
+  background: var(--bg-secondary);
+  border: 1px solid var(--border-color);
+  border-radius: var(--radius-md);
+  padding: 1.25rem;
+  max-width: 480px;
+}
+
+.formTitle {
+  font-size: 0.95rem;
+  font-weight: 700;
+  color: var(--text-primary);
+  margin-bottom: 0.75rem;
+}
+
+.formError {
+  background: var(--danger-soft);
+  color: var(--danger);
+  padding: 0.55rem 0.75rem;
+  border-radius: var(--radius-sm);
+  font-size: 0.83rem;
+  margin-bottom: 0.75rem;
+}
+
+.starPicker {
+  display: flex;
+  gap: 0.25rem;
+  margin-bottom: 0.85rem;
+}
+
+.starButton {
+  background: none;
+  border: none;
+  padding: 0;
+  font-size: 1.5rem;
+  line-height: 1;
+  color: #f59e0b;
+  cursor: pointer;
+}
+
+.textarea {
+  width: 100%;
+  padding: 0.65rem 0.85rem;
+  border-radius: var(--radius-sm);
+  border: 1px solid var(--border-color);
+  background: var(--card-bg);
+  color: var(--text-primary);
+  font-size: 0.88rem;
+  font-family: inherit;
+  resize: vertical;
+}
+
+.textarea:focus {
+  outline: none;
+  border-color: var(--accent);
+  box-shadow: 0 0 0 3px var(--accent-soft);
+}
+
+.formActions {
+  display: flex;
+  justify-content: flex-end;
+  gap: 0.75rem;
+  margin-top: 0.85rem;
+}
+
+.submitButton {
+  padding: 0.55rem 1.2rem;
+  border: none;
+  border-radius: 999px;
+  background: var(--accent);
+  color: #ffffff;
+  font-weight: 600;
+  font-size: 0.85rem;
+  cursor: pointer;
+}
+
+.submitButton:hover:not(:disabled) {
+  background: var(--accent-hover);
+}
+
+.submitButton:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+.cancelButton {
+  padding: 0.55rem 1.1rem;
+  border: 1px solid var(--border-color);
+  border-radius: 999px;
+  background: transparent;
+  color: var(--text-secondary);
+  font-weight: 600;
+  font-size: 0.85rem;
+  cursor: pointer;
+}
+
+.signInPrompt {
+  font-size: 0.88rem;
+  color: var(--text-muted);
+}
+
+.signInPrompt a {
+  color: var(--accent);
+  font-weight: 600;
+  text-decoration: none;
+}
+
+.signInPrompt a:hover {
+  text-decoration: underline;
+}

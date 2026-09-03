@@ -1,0 +1,118 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+  min-width: 160px;
+}
+
+.stepper {
+  display: flex;
+  align-items: center;
+}
+
+.dot {
+  flex-shrink: 0;
+  width: 22px;
+  height: 22px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.65rem;
+  font-weight: 700;
+  border: 2px solid var(--admin-border);
+  background: var(--admin-card-bg);
+  color: var(--admin-text-muted);
+  cursor: pointer;
+  transition: border-color 0.15s, background 0.15s, color 0.15s, box-shadow 0.15s;
+}
+
+.dot.upcoming:hover {
+  border-color: var(--admin-accent);
+  color: var(--admin-accent);
+}
+
+.dot.done {
+  background: var(--admin-success);
+  border-color: var(--admin-success);
+  color: #fff;
+  cursor: default;
+}
+
+.dot.current {
+  background: var(--admin-accent);
+  border-color: var(--admin-accent);
+  color: #fff;
+  box-shadow: 0 0 0 3px var(--admin-accent-soft);
+  cursor: default;
+}
+
+.connector {
+  flex-shrink: 0;
+  width: 16px;
+  height: 2px;
+  background: var(--admin-border);
+}
+
+.connectorDone {
+  background: var(--admin-success);
+}
+
+.footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.6rem;
+}
+
+.statusText {
+  font-size: 0.78rem;
+  font-weight: 600;
+  color: var(--admin-text);
+}
+
+.cancelLink {
+  font-size: 0.72rem;
+  font-weight: 600;
+  color: var(--admin-text-muted);
+  background: none;
+  border: none;
+  padding: 0;
+  cursor: pointer;
+  white-space: nowrap;
+}
+
+.cancelLink:hover {
+  color: var(--admin-danger);
+  text-decoration: underline;
+}
+
+.cancelledRow {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+}
+
+.cancelledBadge {
+  font-size: 0.75rem;
+  font-weight: 700;
+  color: var(--admin-danger);
+  background: var(--admin-danger-soft);
+  padding: 0.3rem 0.6rem;
+  border-radius: 999px;
+}
+
+.restoreLink {
+  font-size: 0.72rem;
+  font-weight: 600;
+  color: var(--admin-text-muted);
+  background: none;
+  border: none;
+  padding: 0;
+  cursor: pointer;
+}
+
+.restoreLink:hover {
+  color: var(--admin-accent);
+  text-decoration: underline;
+}

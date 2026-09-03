@@ -1,0 +1,123 @@
+.container {
+  margin-top: 1rem;
+}
+
+.methodGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+  gap: 0.75rem;
+  margin-bottom: 1.25rem;
+}
+
+.methodCard {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.4rem;
+  padding: 0.9rem 0.5rem;
+  border: 1.5px solid var(--border-color);
+  border-radius: var(--radius-sm);
+  background: var(--input-bg);
+  cursor: pointer;
+  transition: all 0.15s;
+  font-family: inherit;
+}
+
+.methodCard:hover {
+  border-color: var(--accent);
+}
+
+.methodCard.selected {
+  border-color: var(--accent);
+  background: var(--accent-soft);
+}
+
+.methodIcon {
+  font-size: 1.4rem;
+}
+
+.methodLabel {
+  font-size: 0.78rem;
+  font-weight: 600;
+  color: var(--text-secondary);
+  text-align: center;
+}
+
+.selected .methodLabel {
+  color: var(--accent-hover);
+}
+
+.details {
+  background: var(--bg-secondary);
+  border-radius: var(--radius-sm);
+  padding: 1.25rem;
+}
+
+.fieldGroup {
+  display: flex;
+  flex-direction: column;
+}
+
+.row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1rem;
+}
+
+.half {
+  display: flex;
+  flex-direction: column;
+}
+
+.label {
+  font-size: 0.82rem;
+  font-weight: 600;
+  color: var(--text-secondary);
+  margin-top: 0.85rem;
+  margin-bottom: 0.4rem;
+}
+
+.input {
+  padding: 0.65rem 0.85rem;
+  border-radius: var(--radius-sm);
+  border: 1px solid var(--border-color);
+  background: var(--input-bg);
+  color: var(--text-primary);
+  font-size: 0.88rem;
+  font-family: inherit;
+}
+
+.input:focus {
+  outline: none;
+  border-color: var(--accent);
+  box-shadow: 0 0 0 3px var(--accent-soft);
+}
+
+.cardElementBox {
+  padding: 0.85rem;
+  border-radius: var(--radius-sm);
+  border: 1px solid var(--border-color);
+  background: var(--input-bg);
+}
+
+.hint {
+  margin-top: 0.85rem;
+  font-size: 0.78rem;
+  color: var(--text-muted);
+  line-height: 1.5;
+}
+
+.codNote {
+  font-size: 0.9rem;
+  color: var(--text-secondary);
+}
+
+@media (max-width: 480px) {
+  .methodGrid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .row {
+    grid-template-columns: 1fr;
+  }
+}

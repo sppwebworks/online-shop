@@ -1,0 +1,195 @@
+.container {
+  width: 100%;
+  padding: 0 2rem 4rem;
+}
+
+.title {
+  font-size: 2rem;
+  font-weight: 800;
+  color: var(--text-primary);
+  letter-spacing: -0.02em;
+  margin-bottom: 0.35rem;
+}
+
+.subtitle {
+  color: var(--text-muted);
+  font-size: 0.9rem;
+  margin-bottom: 1.5rem;
+}
+
+.confirmation {
+  background: var(--accent-soft);
+  color: var(--accent-hover);
+  padding: 0.85rem 1.1rem;
+  border-radius: var(--radius-sm);
+  font-weight: 600;
+  font-size: 0.9rem;
+  margin-bottom: 2rem;
+}
+
+.empty {
+  text-align: center;
+  padding: 4rem 1rem;
+  color: var(--text-muted);
+}
+
+.browseLink {
+  display: inline-block;
+  margin-top: 1rem;
+  color: var(--accent);
+  font-weight: 600;
+  text-decoration: none;
+}
+
+.orders {
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+}
+
+.order {
+  background: var(--card-bg);
+  border: 1px solid var(--border-color);
+  border-radius: var(--radius-lg);
+  padding: 1.5rem;
+}
+
+.orderHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: 1.25rem;
+  padding-bottom: 1.25rem;
+  border-bottom: 1px solid var(--border-color);
+}
+
+.orderId {
+  font-weight: 700;
+  color: var(--text-primary);
+  font-size: 0.95rem;
+}
+
+.orderDate {
+  color: var(--text-muted);
+  font-size: 0.82rem;
+  margin-top: 0.2rem;
+}
+
+.status {
+  display: inline-block;
+  padding: 0.3rem 0.75rem;
+  border-radius: 999px;
+  font-size: 0.75rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.03em;
+}
+
+.status_pending {
+  background: #fef3c7;
+  color: #92400e;
+}
+
+.status_processing {
+  background: #dbeafe;
+  color: #1d4ed8;
+}
+
+.status_shipped {
+  background: #e0e7ff;
+  color: #4338ca;
+}
+
+.status_delivered {
+  background: var(--accent-soft);
+  color: var(--accent-hover);
+}
+
+.status_cancelled {
+  background: var(--danger-soft);
+  color: var(--danger);
+}
+
+.orderItems {
+  display: flex;
+  flex-direction: column;
+  gap: 0.9rem;
+  margin-bottom: 1.25rem;
+}
+
+.orderItem {
+  display: flex;
+  align-items: center;
+  gap: 0.9rem;
+}
+
+.orderItemImage {
+  width: 48px;
+  height: 48px;
+  object-fit: contain;
+  background: var(--bg-secondary);
+  border-radius: 8px;
+  padding: 0.3rem;
+  flex-shrink: 0;
+}
+
+.orderItemInfo {
+  min-width: 0;
+}
+
+.orderItemTitle {
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: var(--text-primary);
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.orderItemMeta {
+  font-size: 0.78rem;
+  color: var(--text-muted);
+  margin-top: 0.15rem;
+}
+
+.orderFooter {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-top: 1rem;
+  border-top: 1px solid var(--border-color);
+  font-size: 0.85rem;
+  color: var(--text-muted);
+}
+
+.orderFooterLeft {
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+}
+
+.paymentInfo {
+  font-size: 0.78rem;
+}
+
+.paidBadge {
+  color: var(--accent);
+  font-weight: 600;
+}
+
+.paymentPendingBadge {
+  color: #92400e;
+  font-weight: 600;
+}
+
+.orderTotal {
+  font-size: 1.05rem;
+  font-weight: 700;
+  color: var(--text-primary);
+}
+
+.error {
+  color: var(--danger);
+  padding: 2rem;
+  text-align: center;
+}

@@ -1,6 +1,24 @@
-# Getting Started with Create React App
+# Products App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+
+## Backend required
+
+This app now talks to its own Express + MongoDB API instead of a third-party
+API. Before running `npm start`, set up and start the backend:
+
+```bash
+cd server
+# follow server/README.md — create a MongoDB Atlas cluster, configure .env
+npm install
+npm run seed
+npm run dev
+```
+
+Then, in the project root, `npm start` picks up `REACT_APP_API_URL` from
+`.env` (defaults to `http://localhost:5000/api`, matching the backend above).
+
+## Getting Started with Create React App
 
 ## Available Scripts
 

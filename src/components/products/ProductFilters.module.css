@@ -1,0 +1,176 @@
+.panel {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.heading {
+  font-size: 1.05rem;
+  font-weight: 800;
+  color: var(--text-primary);
+  letter-spacing: -0.01em;
+}
+
+.headerActions {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.clearBtn {
+  background: none;
+  border: none;
+  color: var(--accent);
+  font-size: 0.8rem;
+  font-weight: 700;
+  cursor: pointer;
+  padding: 0;
+  font-family: inherit;
+}
+
+.clearBtn:hover {
+  text-decoration: underline;
+}
+
+.closeBtn {
+  display: flex;
+  background: var(--button-bg);
+  border: none;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  cursor: pointer;
+  font-size: 0.85rem;
+  color: var(--text-primary);
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.group {
+  padding-top: 1.25rem;
+  border-top: 1px solid var(--border-color);
+}
+
+.group:first-of-type {
+  padding-top: 0;
+  border-top: none;
+}
+
+.groupTitle {
+  font-size: 0.8rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  color: var(--text-primary);
+  margin-bottom: 0.85rem;
+}
+
+.checkList {
+  display: flex;
+  flex-direction: column;
+  gap: 0.65rem;
+}
+
+.checkRow {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  cursor: pointer;
+}
+
+.checkbox {
+  accent-color: var(--accent);
+  width: 15px;
+  height: 15px;
+  flex-shrink: 0;
+  cursor: pointer;
+}
+
+.checkLabel {
+  font-size: 0.85rem;
+  color: var(--text-secondary);
+  text-transform: capitalize;
+  flex: 1;
+}
+
+.checkCount {
+  font-size: 0.75rem;
+  color: var(--text-muted);
+}
+
+.stars {
+  color: var(--accent);
+  font-size: 0.85rem;
+  letter-spacing: 1px;
+}
+
+.starsEmpty {
+  color: var(--border-color);
+}
+
+.priceSlider {
+  width: 100%;
+  accent-color: var(--accent);
+  cursor: pointer;
+}
+
+.priceLabels {
+  display: flex;
+  justify-content: space-between;
+  font-size: 0.78rem;
+  color: var(--text-muted);
+  margin-top: 0.4rem;
+}
+
+.priceValue {
+  font-weight: 700;
+  color: var(--text-primary);
+}
+
+.swatchGrid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.9rem;
+}
+
+.swatchItem {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.3rem;
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-family: inherit;
+  padding: 0;
+}
+
+.swatch {
+  width: 26px;
+  height: 26px;
+  border-radius: 50%;
+  border: 2px solid var(--border-color);
+  transition: border-color 0.15s, transform 0.15s;
+}
+
+.swatchItem:hover .swatch {
+  transform: scale(1.08);
+}
+
+.swatchItemActive .swatch {
+  border-color: var(--accent);
+  box-shadow: 0 0 0 2px var(--accent-soft);
+}
+
+.swatchLabel {
+  font-size: 0.68rem;
+  color: var(--text-muted);
+  text-transform: capitalize;
+}

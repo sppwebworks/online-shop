@@ -1,0 +1,124 @@
+.container {
+  margin-top: 1rem;
+  padding-top: 1rem;
+  border-top: 1px solid var(--border-color);
+}
+
+.buttonRow {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  flex-wrap: wrap;
+}
+
+.dangerButton,
+.ghostButton,
+.primaryButton {
+  padding: 0.5rem 0.9rem;
+  border-radius: 999px;
+  font-size: 0.8rem;
+  font-weight: 600;
+  cursor: pointer;
+  border: 1px solid var(--border-color);
+  background: var(--card-bg);
+  color: var(--text-secondary);
+  transition: all 0.15s;
+}
+
+.dangerButton:hover {
+  border-color: var(--danger);
+  color: var(--danger);
+}
+
+.ghostButton:hover {
+  border-color: var(--accent);
+  color: var(--accent);
+}
+
+.primaryButton {
+  background: var(--accent);
+  border-color: var(--accent);
+  color: #ffffff;
+}
+
+.primaryButton:hover {
+  background: var(--accent-hover);
+}
+
+.primaryButton:disabled,
+.dangerButton:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+.expiredNote {
+  font-size: 0.78rem;
+  color: var(--text-muted);
+}
+
+.returnForm {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.label {
+  font-size: 0.82rem;
+  font-weight: 600;
+  color: var(--text-secondary);
+}
+
+.textarea {
+  padding: 0.6rem 0.75rem;
+  border-radius: var(--radius-sm);
+  border: 1px solid var(--border-color);
+  background: var(--input-bg);
+  color: var(--text-primary);
+  font-size: 0.85rem;
+  font-family: inherit;
+  resize: vertical;
+}
+
+.textarea:focus {
+  outline: none;
+  border-color: var(--accent);
+  box-shadow: 0 0 0 3px var(--accent-soft);
+}
+
+.formButtons {
+  display: flex;
+  justify-content: flex-end;
+  gap: 0.6rem;
+}
+
+.returnBadge {
+  display: inline-block;
+  padding: 0.3rem 0.75rem;
+  border-radius: 999px;
+  font-size: 0.75rem;
+  font-weight: 700;
+}
+
+.return_requested {
+  background: #fef3c7;
+  color: #92400e;
+}
+
+.return_approved {
+  background: var(--accent-soft);
+  color: var(--accent-hover);
+}
+
+.return_rejected {
+  background: var(--danger-soft);
+  color: var(--danger);
+}
+
+.error {
+  background: var(--danger-soft);
+  color: var(--danger);
+  padding: 0.5rem 0.75rem;
+  border-radius: var(--radius-sm);
+  font-size: 0.8rem;
+  margin-bottom: 0.6rem;
+}

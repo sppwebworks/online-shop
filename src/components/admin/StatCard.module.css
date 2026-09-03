@@ -1,0 +1,55 @@
+.card {
+  background: var(--admin-card-bg);
+  border: 1px solid var(--admin-border);
+  border-radius: var(--admin-radius);
+  padding: 1.25rem;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  transition:
+    box-shadow 0.2s,
+    transform 0.2s;
+}
+
+.card:hover {
+  box-shadow: var(--admin-shadow-md);
+  transform: translateY(-1px);
+}
+
+.icon {
+  font-size: 1.4rem;
+  width: 44px;
+  height: 44px;
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--admin-accent-soft);
+  border-radius: var(--admin-radius-sm);
+}
+
+.icon.green {
+  background: var(--admin-success-soft);
+}
+
+.icon.amber {
+  background: var(--admin-warning-soft);
+}
+
+.icon.purple {
+  background: #f3e8ff;
+}
+
+.value {
+  font-size: 1.35rem;
+  font-weight: 700;
+  color: var(--admin-text);
+  line-height: 1.2;
+  letter-spacing: -0.01em;
+}
+
+.label {
+  font-size: 0.78rem;
+  color: var(--admin-text-muted);
+  margin-top: 0.2rem;
+}

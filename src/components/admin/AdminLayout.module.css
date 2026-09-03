@@ -1,0 +1,238 @@
+.layout {
+  display: flex;
+  min-height: 100vh;
+  background: var(--admin-bg);
+  color: var(--admin-text);
+  font-family:
+    "Inter",
+    -apple-system,
+    BlinkMacSystemFont,
+    "Segoe UI",
+    sans-serif;
+}
+
+.sidebar {
+  width: 240px;
+  flex-shrink: 0;
+  background: var(--admin-sidebar-bg);
+  display: flex;
+  flex-direction: column;
+  position: sticky;
+  top: 0;
+  height: 100vh;
+}
+
+@media (max-width: 767px) {
+  .sidebar {
+    display: none;
+  }
+}
+
+.brand {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  padding: 1.5rem 1.25rem;
+  font-size: 0.95rem;
+  font-weight: 700;
+  color: #ffffff;
+  text-decoration: none;
+  border-bottom: 1px solid var(--admin-sidebar-border);
+  letter-spacing: -0.01em;
+}
+
+.brandMark {
+  width: 9px;
+  height: 9px;
+  border-radius: 3px;
+  background: var(--admin-accent);
+  flex-shrink: 0;
+}
+
+.nav {
+  flex: 1;
+  padding: 1rem 0.75rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.15rem;
+  overflow-y: auto;
+}
+
+.navLink {
+  display: flex;
+  align-items: center;
+  gap: 0.7rem;
+  padding: 0.6rem 0.75rem;
+  border-radius: 8px;
+  color: var(--admin-sidebar-text);
+  text-decoration: none;
+  font-weight: 500;
+  font-size: 0.85rem;
+  transition: all 0.15s;
+}
+
+.navIcon {
+  width: 18px;
+  text-align: center;
+  flex-shrink: 0;
+  font-size: 0.9rem;
+}
+
+.navLink:hover {
+  background: var(--admin-sidebar-hover);
+  color: #ffffff;
+}
+
+.navLink.active {
+  background: var(--admin-accent);
+  color: #ffffff;
+}
+
+.sidebarFooter {
+  padding: 0.75rem;
+  border-top: 1px solid var(--admin-sidebar-border);
+  display: flex;
+  flex-direction: column;
+  gap: 0.15rem;
+}
+
+.logoutButton {
+  display: flex;
+  align-items: center;
+  gap: 0.7rem;
+  padding: 0.6rem 0.75rem;
+  border-radius: 8px;
+  border: none;
+  background: transparent;
+  color: #f87171;
+  font-weight: 500;
+  font-size: 0.85rem;
+  cursor: pointer;
+  text-align: left;
+  transition: background 0.15s;
+  font-family: inherit;
+}
+
+.logoutButton:hover {
+  background: var(--admin-sidebar-hover);
+}
+
+.overlay {
+  display: none;
+}
+
+.menuButton {
+  display: none;
+}
+
+@media (max-width: 767px) {
+  .overlay {
+    display: block;
+    position: fixed;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.5);
+    z-index: 40;
+  }
+
+  .menuButton {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 36px;
+    height: 36px;
+    border: none;
+    background: var(--admin-card-bg);
+    border: 1px solid var(--admin-border);
+    color: var(--admin-text);
+    border-radius: 8px;
+    font-size: 1.05rem;
+    cursor: pointer;
+  }
+}
+
+.mobileSidebar {
+  display: none;
+}
+
+@media (max-width: 767px) {
+  .mobileSidebar {
+    display: flex;
+    flex-direction: column;
+    position: fixed;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    width: 240px;
+    max-width: 80vw;
+    background: var(--admin-sidebar-bg);
+    z-index: 50;
+  }
+}
+
+.content {
+  flex: 1;
+  min-width: 0;
+}
+
+.topbar {
+  height: 64px;
+  display: flex;
+  align-items: center;
+  padding: 0 1.75rem;
+  border-bottom: 1px solid var(--admin-border);
+  background: var(--admin-card-bg);
+  position: sticky;
+  top: 0;
+  z-index: 10;
+}
+
+.topbarSpacer {
+  flex: 1;
+}
+
+.userBadge {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+}
+
+.avatar {
+  width: 32px;
+  height: 32px;
+  border-radius: 999px;
+  background: var(--admin-accent-soft);
+  color: var(--admin-accent);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.75rem;
+  font-weight: 700;
+}
+
+.userName {
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: var(--admin-text);
+}
+
+@media (max-width: 767px) {
+  .userName {
+    display: none;
+  }
+
+  .topbar {
+    padding: 0 1rem;
+  }
+}
+
+.main {
+  padding: 1.75rem;
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+@media (max-width: 767px) {
+  .main {
+    padding: 1.25rem;
+  }
+}

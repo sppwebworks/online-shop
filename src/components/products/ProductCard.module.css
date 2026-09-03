@@ -1,0 +1,140 @@
+.card {
+  background: var(--card-bg);
+  border: 1px solid var(--border-color);
+  border-radius: var(--radius-md);
+  overflow: hidden;
+  transition:
+    transform 0.2s ease,
+    box-shadow 0.2s ease,
+    border-color 0.2s ease;
+  text-decoration: none;
+  color: var(--text-primary);
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+.card:hover {
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-md);
+  border-color: transparent;
+}
+
+.imageContainer {
+  position: relative;
+  padding: 1.5rem;
+  background: var(--bg-secondary);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 200px;
+}
+
+.cornerTags {
+  position: absolute;
+  top: 0.6rem;
+  left: 0.6rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.3rem;
+  z-index: 1;
+}
+
+.tag {
+  padding: 0.2rem 0.5rem;
+  font-size: 0.65rem;
+  font-weight: 700;
+  letter-spacing: 0.03em;
+  color: #ffffff;
+  border-radius: 4px;
+}
+
+.tagNew {
+  background: var(--accent);
+}
+
+.tagSale {
+  background: #e0483e;
+}
+
+.image {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+.content {
+  padding: 1.1rem 1.25rem 1.25rem;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.title {
+  font-size: 0.9rem;
+  font-weight: 600;
+  margin-bottom: 0.4rem;
+  line-height: 1.4;
+  color: var(--text-primary);
+}
+
+.category {
+  font-size: 0.7rem;
+  color: var(--text-muted);
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  margin-bottom: 0.35rem;
+  font-weight: 600;
+}
+
+.brand {
+  font-size: 0.78rem;
+  color: var(--text-primary);
+  font-weight: 700;
+  margin-bottom: 0.2rem;
+}
+
+.priceRow {
+  display: flex;
+  align-items: baseline;
+  gap: 0.4rem;
+  flex-wrap: wrap;
+  margin-top: auto;
+}
+
+.price {
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: var(--text-primary);
+}
+
+.originalPrice {
+  font-size: 0.82rem;
+  color: var(--text-muted);
+  text-decoration: line-through;
+}
+
+.discount {
+  font-size: 0.82rem;
+  color: #ff905a;
+  font-weight: 700;
+}
+
+.ratingBadge {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.25rem;
+  width: fit-content;
+  margin-top: 0.5rem;
+  padding: 0.15rem 0.5rem;
+  background: var(--accent);
+  color: #ffffff;
+  font-size: 0.72rem;
+  font-weight: 700;
+  border-radius: var(--radius-sm);
+}
+
+.ratingCount {
+  font-weight: 500;
+  opacity: 0.85;
+}

@@ -1,0 +1,430 @@
+.title {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: var(--admin-text);
+  letter-spacing: -0.01em;
+}
+
+.subtitle {
+  font-size: 0.87rem;
+  color: var(--admin-text-muted);
+  margin-top: 0.25rem;
+  margin-bottom: 1.5rem;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 1rem;
+  margin-bottom: 1.75rem;
+}
+
+.form {
+  margin-bottom: 1.5rem;
+  background: var(--admin-card-bg);
+  border: 1px solid var(--admin-border);
+  border-radius: var(--admin-radius);
+  padding: 1.25rem 1.5rem 1.5rem;
+}
+
+.formTitle {
+  font-size: 0.95rem;
+  font-weight: 700;
+  color: var(--admin-text);
+  margin-bottom: 1rem;
+}
+
+.formGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 1rem;
+}
+
+.field {
+  display: flex;
+  flex-direction: column;
+}
+
+.imageField {
+  margin-top: 1rem;
+}
+
+.label {
+  font-size: 0.78rem;
+  font-weight: 600;
+  color: var(--admin-text-muted);
+  margin-bottom: 0.4rem;
+}
+
+.formActions {
+  display: flex;
+  justify-content: flex-end;
+  gap: 0.75rem;
+  margin-top: 1.25rem;
+}
+
+.input {
+  width: 100%;
+  padding: 0.6rem 0.8rem;
+  border-radius: var(--admin-radius-sm);
+  border: 1px solid var(--admin-border);
+  background: var(--admin-bg);
+  color: var(--admin-text);
+  font-size: 0.87rem;
+}
+
+.input:focus {
+  outline: none;
+  border-color: var(--admin-accent);
+  box-shadow: 0 0 0 3px var(--admin-accent-soft);
+}
+
+.submitButton {
+  padding: 0.6rem 1.1rem;
+  border: none;
+  border-radius: var(--admin-radius-sm);
+  background: var(--admin-accent);
+  color: #ffffff;
+  font-weight: 600;
+  font-size: 0.87rem;
+  cursor: pointer;
+  white-space: nowrap;
+  transition: background 0.2s;
+}
+
+.submitButton:hover:not(:disabled) {
+  background: var(--admin-accent-hover);
+}
+
+.submitButton:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+.cancelButton {
+  padding: 0.6rem 1.1rem;
+  border: 1px solid var(--admin-border);
+  border-radius: var(--admin-radius-sm);
+  background: transparent;
+  color: var(--admin-text-secondary);
+  font-weight: 600;
+  font-size: 0.87rem;
+  cursor: pointer;
+  white-space: nowrap;
+}
+
+.cancelButton:hover {
+  background: var(--admin-bg);
+}
+
+.formError {
+  background: var(--admin-danger-soft);
+  color: var(--admin-danger);
+  padding: 0.55rem 0.75rem;
+  border-radius: var(--admin-radius-sm);
+  font-size: 0.83rem;
+  margin-top: 1rem;
+}
+
+.toolbar {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 1rem;
+  margin-bottom: 1.25rem;
+}
+
+.searchInput {
+  flex: 1;
+  min-width: 220px;
+  padding: 0.6rem 0.75rem;
+  border-radius: var(--admin-radius-sm);
+  border: 1px solid var(--admin-border);
+  background: var(--admin-card-bg);
+  color: var(--admin-text);
+  font-size: 0.85rem;
+}
+
+.searchInput:focus {
+  outline: none;
+  border-color: var(--admin-accent);
+  box-shadow: 0 0 0 3px var(--admin-accent-soft);
+}
+
+.filterSelect {
+  min-width: 170px;
+  padding: 0.6rem 0.75rem;
+  border-radius: var(--admin-radius-sm);
+  border: 1px solid var(--admin-border);
+  background: var(--admin-card-bg);
+  color: var(--admin-text);
+  font-size: 0.85rem;
+}
+
+.filterSelect:focus {
+  outline: none;
+  border-color: var(--admin-accent);
+  box-shadow: 0 0 0 3px var(--admin-accent-soft);
+}
+
+.viewToggle {
+  display: flex;
+  border: 1px solid var(--admin-border);
+  border-radius: var(--admin-radius-sm);
+  overflow: hidden;
+}
+
+.viewButton {
+  width: 36px;
+  height: 36px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: none;
+  background: var(--admin-card-bg);
+  color: var(--admin-text-muted);
+  cursor: pointer;
+  font-size: 0.95rem;
+}
+
+.viewButton + .viewButton {
+  border-left: 1px solid var(--admin-border);
+}
+
+.viewButton:hover {
+  background: var(--admin-bg);
+}
+
+.viewButton.viewActive {
+  background: var(--admin-accent-soft);
+  color: var(--admin-accent);
+}
+
+.noResultsStandalone {
+  padding: 2.5rem;
+  text-align: center;
+  color: var(--admin-text-muted);
+  background: var(--admin-card-bg);
+  border: 1px solid var(--admin-border);
+  border-radius: var(--admin-radius);
+}
+
+.listWrapper {
+  background: var(--admin-card-bg);
+  border: 1px solid var(--admin-border);
+  border-radius: var(--admin-radius);
+  overflow-x: auto;
+}
+
+.list {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.list th {
+  text-align: left;
+  font-size: 0.72rem;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  color: var(--admin-text-muted);
+  padding: 0.8rem 1.1rem;
+  border-bottom: 1px solid var(--admin-border);
+}
+
+.list td {
+  padding: 0.65rem 1.1rem;
+  border-bottom: 1px solid var(--admin-border);
+  font-size: 0.85rem;
+  color: var(--admin-text);
+  white-space: nowrap;
+}
+
+.list tr:last-child td {
+  border-bottom: none;
+}
+
+.list tr:hover td {
+  background: var(--admin-bg);
+}
+
+.hiddenRow {
+  opacity: 0.55;
+}
+
+.thumbWrap {
+  width: 42px;
+  height: 42px;
+  border-radius: 6px;
+  overflow: hidden;
+  background: var(--admin-bg);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.thumb {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.thumbPlaceholder {
+  font-size: 1.1rem;
+  opacity: 0.5;
+}
+
+.list td.nameCell {
+  font-weight: 600;
+  text-transform: capitalize;
+  white-space: normal;
+}
+
+.statusVisible {
+  display: inline-block;
+  padding: 0.2rem 0.6rem;
+  border-radius: 999px;
+  background: var(--admin-success-soft);
+  color: #15803d;
+  font-size: 0.72rem;
+  font-weight: 600;
+}
+
+.statusHidden {
+  display: inline-block;
+  padding: 0.2rem 0.6rem;
+  border-radius: 999px;
+  background: var(--admin-bg);
+  color: var(--admin-text-muted);
+  font-size: 0.72rem;
+  font-weight: 600;
+}
+
+.actions {
+  display: flex;
+  gap: 0.5rem;
+}
+
+.editButton,
+.visibilityButton,
+.removeButton {
+  width: 32px;
+  height: 32px;
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 6px;
+  font-size: 0.9rem;
+  line-height: 1;
+  cursor: pointer;
+}
+
+.editButton {
+  border: 1px solid var(--admin-border);
+  background: var(--admin-bg);
+  color: var(--admin-text);
+}
+
+.editButton:hover {
+  background: var(--admin-border);
+}
+
+.visibilityButton {
+  border: none;
+  background: var(--admin-warning-soft);
+  color: #92400e;
+}
+
+.visibilityButton:hover {
+  background: #fde68a;
+}
+
+.removeButton {
+  border: none;
+  background: var(--admin-danger-soft);
+  color: var(--admin-danger);
+}
+
+.removeButton:hover {
+  background: #fecaca;
+}
+
+.error {
+  color: var(--admin-danger);
+}
+
+/* Grid (card) view */
+
+.cardGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  gap: 1rem;
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  background: var(--admin-card-bg);
+  border: 1px solid var(--admin-border);
+  border-radius: var(--admin-radius);
+  overflow: hidden;
+  transition: box-shadow 0.15s;
+}
+
+.card:hover {
+  box-shadow: var(--admin-shadow-md);
+}
+
+.cardHidden {
+  opacity: 0.55;
+}
+
+.cardImageWrap {
+  aspect-ratio: 16 / 9;
+  background: var(--admin-bg);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.75rem;
+}
+
+.cardImage {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.cardBody {
+  padding: 0.85rem 1rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.35rem;
+  flex: 1;
+}
+
+.cardName {
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: var(--admin-text);
+  text-transform: capitalize;
+}
+
+.cardMeta {
+  font-size: 0.78rem;
+  color: var(--admin-text-muted);
+}
+
+.cardActions {
+  display: flex;
+  justify-content: center;
+  gap: 0.5rem;
+  padding: 0.65rem 1rem;
+  border-top: 1px solid var(--admin-border);
+}
+
+.gridPaginationWrap {
+  background: var(--admin-card-bg);
+  border: 1px solid var(--admin-border);
+  border-radius: var(--admin-radius);
+  margin-top: 1rem;
+}

@@ -1,0 +1,55 @@
+.container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+  padding: 1rem 1.1rem;
+}
+
+.rangeLabel {
+  font-size: 0.8rem;
+  color: var(--admin-text-muted);
+}
+
+.controls {
+  display: flex;
+  align-items: center;
+  gap: 0.3rem;
+}
+
+.navButton,
+.pageButton {
+  min-width: 32px;
+  height: 32px;
+  padding: 0 0.6rem;
+  border-radius: 6px;
+  border: 1px solid var(--admin-border);
+  background: var(--admin-card-bg);
+  color: var(--admin-text);
+  font-size: 0.8rem;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.navButton:hover:not(:disabled),
+.pageButton:hover:not(.active) {
+  background: var(--admin-bg);
+}
+
+.navButton:disabled {
+  opacity: 0.4;
+  cursor: not-allowed;
+}
+
+.pageButton.active {
+  background: var(--admin-accent);
+  border-color: var(--admin-accent);
+  color: #ffffff;
+}
+
+.ellipsis {
+  padding: 0 0.3rem;
+  color: var(--admin-text-muted);
+  font-size: 0.8rem;
+}

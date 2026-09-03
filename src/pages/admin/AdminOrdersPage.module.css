@@ -1,0 +1,227 @@
+.title {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: var(--admin-text);
+  letter-spacing: -0.01em;
+}
+
+.subtitle {
+  font-size: 0.87rem;
+  color: var(--admin-text-muted);
+  margin-top: 0.25rem;
+  margin-bottom: 1.5rem;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 1rem;
+  margin-bottom: 1.75rem;
+}
+
+.toolbar {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 1rem;
+  margin-bottom: 1.25rem;
+}
+
+.searchInput {
+  flex: 1;
+  min-width: 220px;
+  padding: 0.6rem 0.75rem;
+  border-radius: var(--admin-radius-sm);
+  border: 1px solid var(--admin-border);
+  background: var(--admin-card-bg);
+  color: var(--admin-text);
+  font-size: 0.85rem;
+}
+
+.searchInput:focus {
+  outline: none;
+  border-color: var(--admin-accent);
+  box-shadow: 0 0 0 3px var(--admin-accent-soft);
+}
+
+.filterSelect {
+  min-width: 150px;
+  padding: 0.6rem 0.75rem;
+  border-radius: var(--admin-radius-sm);
+  border: 1px solid var(--admin-border);
+  background: var(--admin-card-bg);
+  color: var(--admin-text);
+  font-size: 0.85rem;
+  text-transform: capitalize;
+}
+
+.filterSelect:focus {
+  outline: none;
+  border-color: var(--admin-accent);
+  box-shadow: 0 0 0 3px var(--admin-accent-soft);
+}
+
+.noResultsStandalone {
+  padding: 2.5rem;
+  text-align: center;
+  color: var(--admin-text-muted);
+  background: var(--admin-card-bg);
+  border: 1px solid var(--admin-border);
+  border-radius: var(--admin-radius);
+}
+
+.listWrapper {
+  background: var(--admin-card-bg);
+  border: 1px solid var(--admin-border);
+  border-radius: var(--admin-radius);
+  overflow-x: auto;
+}
+
+.list {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.list th {
+  text-align: left;
+  font-size: 0.72rem;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  color: var(--admin-text-muted);
+  padding: 0.8rem 1.1rem;
+  border-bottom: 1px solid var(--admin-border);
+}
+
+.list td {
+  padding: 0.75rem 1.1rem;
+  border-bottom: 1px solid var(--admin-border);
+  font-size: 0.85rem;
+  color: var(--admin-text);
+  white-space: nowrap;
+  vertical-align: middle;
+}
+
+.list tr:last-child td {
+  border-bottom: none;
+}
+
+.list tr:hover td {
+  background: var(--admin-bg);
+}
+
+.orderId {
+  font-weight: 600;
+}
+
+.orderDate {
+  font-size: 0.75rem;
+  color: var(--admin-text-muted);
+  margin-top: 0.15rem;
+}
+
+.customerName {
+  font-weight: 500;
+}
+
+.customerEmail {
+  font-size: 0.75rem;
+  color: var(--admin-text-muted);
+  margin-top: 0.15rem;
+}
+
+.paymentMethod {
+  font-weight: 500;
+}
+
+.paidLabel {
+  font-size: 0.75rem;
+  color: var(--admin-success);
+  font-weight: 600;
+  margin-top: 0.15rem;
+}
+
+.paymentPendingLabel {
+  font-size: 0.75rem;
+  color: #92400e;
+  font-weight: 600;
+  margin-top: 0.15rem;
+}
+
+.total {
+  font-weight: 700;
+}
+
+.returnBadge {
+  font-size: 0.7rem;
+  font-weight: 700;
+  text-transform: capitalize;
+  margin-top: 0.4rem;
+}
+
+.returnBadge_approved {
+  color: var(--admin-success);
+}
+
+.returnBadge_rejected {
+  color: var(--admin-danger);
+}
+
+.returnRow td {
+  background: var(--admin-warning-soft);
+}
+
+.list td.returnCell {
+  white-space: normal;
+  padding: 0.65rem 1.1rem;
+}
+
+.returnRequest {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+.returnRequestLabel {
+  font-size: 0.82rem;
+  font-weight: 600;
+  color: #92400e;
+}
+
+.returnRequestButtons {
+  display: flex;
+  gap: 0.5rem;
+  flex-shrink: 0;
+}
+
+.approveButton,
+.rejectButton {
+  padding: 0.4rem 0.85rem;
+  border-radius: 6px;
+  font-size: 0.78rem;
+  font-weight: 600;
+  cursor: pointer;
+  border: 1px solid transparent;
+}
+
+.approveButton {
+  background: var(--admin-success);
+  color: #fff;
+}
+
+.rejectButton {
+  background: var(--admin-card-bg);
+  border-color: var(--admin-danger);
+  color: var(--admin-danger);
+}
+
+.noResults {
+  padding: 2rem;
+  text-align: center;
+  color: var(--admin-text-muted);
+}
+
+.error {
+  color: var(--admin-danger);
+}

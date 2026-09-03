@@ -1,0 +1,148 @@
+.layout {
+  display: flex;
+  align-items: flex-start;
+  gap: 2rem;
+}
+
+.sidebar {
+  flex: 0 0 240px;
+  position: sticky;
+  top: 5.5rem;
+  background: var(--card-bg);
+  border: 1px solid var(--border-color);
+  border-radius: var(--radius-lg);
+  padding: 1.5rem;
+  max-height: calc(100vh - 7rem);
+  overflow-y: auto;
+}
+
+.content {
+  flex: 1;
+  min-width: 0;
+}
+
+.toolbar {
+  display: flex;
+  gap: 0.75rem;
+  margin-bottom: 1.5rem;
+}
+
+.searchInput {
+  flex: 1;
+  min-width: 200px;
+  padding: 0.7rem 1rem;
+  border: 1px solid var(--border-color);
+  border-radius: var(--radius-sm);
+  font-size: 0.9rem;
+  background: var(--input-bg);
+  color: var(--text-primary);
+  transition: border-color 0.2s;
+}
+
+.searchInput:focus {
+  outline: none;
+  border-color: var(--accent);
+  box-shadow: 0 0 0 3px var(--accent-soft);
+}
+
+.filterToggle {
+  display: none;
+  flex-shrink: 0;
+  align-items: center;
+  padding: 0.7rem 1.2rem;
+  background: var(--text-primary);
+  color: var(--bg-primary);
+  border: none;
+  border-radius: var(--radius-sm);
+  font-size: 0.85rem;
+  font-weight: 700;
+  cursor: pointer;
+  font-family: inherit;
+}
+
+.stats {
+  color: var(--text-muted);
+  font-size: 0.85rem;
+  margin-bottom: 1.5rem;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+  gap: 1.5rem;
+}
+
+.noResults {
+  text-align: center;
+  padding: 3rem;
+  color: var(--text-secondary);
+  font-size: 1rem;
+}
+
+.error {
+  padding: 1.5rem;
+  text-align: center;
+  color: var(--danger);
+  background: var(--danger-soft);
+  border-radius: var(--radius-sm);
+}
+
+.drawerBackdrop {
+  display: none;
+}
+
+.drawer {
+  display: none;
+}
+
+@media (max-width: 900px) {
+  .sidebar {
+    display: none;
+  }
+
+  .filterToggle {
+    display: flex;
+  }
+
+  .drawerBackdrop {
+    display: block;
+    position: fixed;
+    inset: 0;
+    background: rgba(26, 23, 20, 0.5);
+    z-index: 200;
+  }
+
+  .drawer {
+    display: block;
+    position: fixed;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    width: min(85vw, 320px);
+    background: var(--card-bg);
+    padding: 1.5rem;
+    z-index: 201;
+    overflow-y: auto;
+    animation: slideIn 0.2s ease-out;
+  }
+
+  @keyframes slideIn {
+    from {
+      transform: translateX(-100%);
+    }
+    to {
+      transform: translateX(0);
+    }
+  }
+}
+
+@media (max-width: 480px) {
+  .toolbar {
+    flex-wrap: wrap;
+  }
+
+  .searchInput {
+    min-width: 0;
+    flex-basis: 100%;
+  }
+}
