@@ -9,7 +9,7 @@
 
 @media (max-width: 780px) {
   .layout {
-    grid-template-columns: 1fr;
+    grid-template-columns: minmax(0, 1fr);
   }
 
   .preview {
@@ -62,7 +62,7 @@
 @media (max-width: 560px) {
   .row,
   .row3 {
-    grid-template-columns: 1fr;
+    grid-template-columns: minmax(0, 1fr);
   }
 }
 
