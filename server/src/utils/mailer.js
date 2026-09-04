@@ -19,6 +19,9 @@ const getTransporter = () => {
         port: Number(process.env.EMAIL_PORT) || 587,
         secure: process.env.EMAIL_SECURE === "true",
         auth: { user: process.env.EMAIL_USER, pass: process.env.EMAIL_PASS },
+        connectionTimeout: 8000,
+        greetingTimeout: 8000,
+        socketTimeout: 8000,
       }),
     );
     return transporterPromise;
