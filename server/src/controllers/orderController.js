@@ -194,7 +194,7 @@ const createOrder = asyncHandler(async (req, res) => {
     stripePaymentIntentId: verifiedIntentId,
   });
 
-  await notify(req.user.email, orderConfirmationEmail(order));
+  notify(req.user.email, orderConfirmationEmail(order));
 
   res.status(201).json(order);
 });
@@ -247,7 +247,7 @@ const updateOrderStatus = asyncHandler(async (req, res) => {
   await order.save();
 
   if (order.user?.email) {
-    await notify(
+    notify(
       order.user.email,
       status === "cancelled" ? orderCancelledEmail(order) : orderStatusUpdateEmail(order),
     );
@@ -276,7 +276,7 @@ const cancelMyOrder = asyncHandler(async (req, res) => {
   await restockItems(order.items);
   await order.save();
 
-  await notify(req.user.email, orderCancelledEmail(order));
+  notify(req.user.email, orderCancelledEmail(order));
 
   res.json(order);
 });
@@ -313,9 +313,9 @@ const requestReturn = asyncHandler(async (req, res) => {
   order.returnRequestedAt = new Date();
   await order.save();
 
-  await notify(req.user.email, returnRequestedEmail(order));
+  notify(req.user.email, returnRequestedEmail(order));
   if (process.env.ADMIN_NOTIFY_EMAIL) {
-    await notify(process.env.ADMIN_NOTIFY_EMAIL, adminReturnNotificationEmail(order));
+    notify(process.env.ADMIN_NOTIFY_EMAIL, adminReturnNotificationEmail(order));
   }
 
   res.json(order);
@@ -346,7 +346,7 @@ const reviewReturn = asyncHandler(async (req, res) => {
   await order.save();
 
   if (order.user?.email) {
-    await notify(order.user.email, returnDecisionEmail(order));
+    notify(order.user.email, returnDecisionEmail(order));
   }
 
   res.json(order);

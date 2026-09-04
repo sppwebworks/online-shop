@@ -45,7 +45,7 @@ const register = asyncHandler(async (req, res) => {
     role: isFirstUser ? "admin" : "customer",
   });
 
-  await notify(user.email, welcomeEmail(user.name));
+  notify(user.email, welcomeEmail(user.name));
 
   res.status(201).json({ user, token: signToken(user) });
 });
@@ -96,7 +96,7 @@ const forgotPassword = asyncHandler(async (req, res) => {
 
   const clientOrigin = process.env.CLIENT_ORIGIN?.split(",")[0] || "http://localhost:3000";
   const resetUrl = `${clientOrigin}/reset-password/${rawToken}`;
-  await notify(user.email, passwordResetEmail(user.name, resetUrl));
+  notify(user.email, passwordResetEmail(user.name, resetUrl));
 
   res.json(genericResponse);
 });
